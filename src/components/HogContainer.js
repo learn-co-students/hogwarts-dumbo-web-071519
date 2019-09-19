@@ -3,6 +3,7 @@ import HogTile from './HogTile'
 
 
 export default class HogContainer extends Component{
+    //!! This makes everything in the pig data (from the props) into a component 
     renderHogs = () => {
         return this.props.hogs.map( (hog, key) => <HogTile key={ key } hogInfo={hog}/>)
     }

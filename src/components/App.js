@@ -9,6 +9,7 @@ class App extends Component {
     return (
       <div className="App">
           <Nav />
+          {/* This is where pass the hogs data as props */}
           <HogContainer key={hogs.id} hogs={hogs} />
       </div>
     )
