@@ -52,7 +52,7 @@ import React, { Component } from 'react'
 // refactored a bit here and made our tiles into a functional component. 
 // also moved our nice format name into a very hacky interpolation one liner
 const PigTile = props => {
-
+// comment to make second pr
     return (
         <div className="ui card eight wide column pigTile" onClick={props.handlePigTileClick}>
             <div className="content">
