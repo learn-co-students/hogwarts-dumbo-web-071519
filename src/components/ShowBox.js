@@ -3,6 +3,8 @@ import PigTile from './PigTile'
 
 
 export default class ShowBox extends Component {
+
+    //this needs state still and bc pigtile is written as an FC right now, will probably need to pass state there as well
     
     // function that we pass to switch state on click
     handlePigTileClick = () => {
@@ -16,10 +18,10 @@ export default class ShowBox extends Component {
             return <PigTile hog = {hog} key= {key} onClick={this.handlePigTileClick}/>
         })
     }
-
+    //makes our one showbox component
     render() {
         return (
-            <div> {this.makePigTiles()} </div>
+            <div className="ui grid container"> {this.makePigTiles()} </div>
         )
     }
 }
