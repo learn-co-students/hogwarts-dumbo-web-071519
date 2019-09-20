@@ -39,9 +39,9 @@ class App extends Component {
   state = {
     hogsCol: [...hogs],
     greased: "ungreased",
-    filter: "all"
+    sortBy: "all"
   }
-  
+
   filterHogs = (wantGreased) => {
     if(wantGreased === "greased"){
       return this.state.hogsCol.filter(
@@ -83,13 +83,13 @@ class App extends Component {
     } else if( sortBy === 'weight'){
       return this.sortPigsByWeight(hogsToSort);
     } else{
-      return hogsToSort;
+      return hogsToSort
     }
   }
 
   handleGreaseChange = (event) => {
     const filteredHogs = this.filterHogs(event.target.value);
-    const newHogs = this.handleSort(this.state.filter, filteredHogs);
+    const newHogs = this.handleSort(this.state.sortBy, filteredHogs);
     this.setState({
       hogsCol: newHogs,
       greased: event.target.value
@@ -100,7 +100,7 @@ class App extends Component {
     const newHogs = this.handleSort(event.target.value, this.state.hogsCol)
    this.setState({
       hogsCol: newHogs,
-      filter: event.target.value
+      sortBy: event.target.value
    })
   }
   

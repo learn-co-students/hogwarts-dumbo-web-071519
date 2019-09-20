@@ -27,14 +27,14 @@ const Nav = (props) => {
 						type="radio" 
 						name="sort" 
 						value="name" 
-						checked={props.stateStuff.filter === "name"} 
+						checked={props.stateStuff.sortBy === "name"} 
 						onChange={props.sortChange} ></input>
 					<label> Weight:</label>
 						<input 
 						type="radio" 
 						name="sort" 
 						value="weight" 
-						checked={props.stateStuff.filter === "weight"} 
+						checked={props.stateStuff.sortBy === "weight"} 
 						onChange={props.sortChange}></input>
 					</form>
 				</div>
