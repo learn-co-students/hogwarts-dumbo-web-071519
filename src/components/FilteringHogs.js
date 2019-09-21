@@ -6,7 +6,7 @@ export default class FilteringHogs extends Component{
         return(
             <form>
                 <label className="label">Show and/or Organize by:</label>
-                <select className="ui search dropdown" onChange={(e) => this.props.selectingFilter(e)}>
+                <select className="ui search dropdown" onChange={(e) => this.props.changeHogs(e)}>
                     <option value="all">All</option>
                     <option value="name">Name</option>
                     <option value="weight">Weight</option>
