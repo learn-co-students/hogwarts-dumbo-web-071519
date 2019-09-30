@@ -1,17 +1,34 @@
-import React, { Component } from 'react';
-import '../App.css';
-import Nav from './Nav'
-import hogs from '../porkers_data';
+import React from 'react'
+import PortfolioContainer from './PortfolioContainer'
+import GameContainer from './GameContainer'
+import Sidebar from './Sidebar'
+// import axios from 'axios'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-          < Nav />
 
-      </div>
+// const csrfToken = document.querySelector('[name="csrf-token"]').content
+// axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
+
+
+
+
+
+
+class App extends React.Component {
+
+
+    
+render() {
+
+    return( 
+        <div>
+
+  
+        <div></div>
+        <PortfolioContainer/>
+            <Sidebar/>
+        </div>
+        
     )
-  }
-}
+}}
 
 export default App;

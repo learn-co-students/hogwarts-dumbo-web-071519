@@ -3,15 +3,6 @@
   text-align: center;
 }
 
-.TwirlyPig {
-  transition: all 3s ease-in-out;
-  display: inline;
-}
-
-.TwirlyPig:hover {
-  transform: scale(1.5);
-}
-
 .navWrapper {
   margin-bottom: 2%;
 }
@@ -43,13 +34,7 @@
   font-size: .75em;
 }
 
-.hoggyText {
-  font-size: 1.5em;
-}
 
-.achievementText {
-  color: purple;
-}
 
 ul {
   list-style-type: none;
@@ -73,17 +58,7 @@ ul {
 }
 
 
-.pigTile {
-  display: inline;
-  background-repeat: no-repeat;
-  background-position: center 90%;
-  float: left;
-  margin: 2%;
-  padding: 1%;
-  outline: #3B0B0B dotted thick;
-  transition: 0.75s;
-  opacity: 1;
-}
+
 
 .minBackgroundSneak {
   position: absolute;
@@ -102,24 +77,6 @@ ul {
   opacity: 0.75;
 }
 
-.pigTile h3 {
-  color: #FBB;
-}
-.minPigTile {
-  width: 250px;
-  height: 250px;
-  background-size: cover;
-}
-
-.maxPigTile {
-  background-size: cover;
-  width: 500px;
-  height: 500px;
-}
-
-.pigTile:hover {
-  transform: scale(1.05);
-}
 
 
 .App-logo {
@@ -134,7 +91,4 @@ ul {
 }
 
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+
