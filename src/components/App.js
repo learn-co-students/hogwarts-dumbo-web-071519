@@ -1,6 +1,6 @@
 import React from 'react'
 import PortfolioContainer from './PortfolioContainer'
-import GameContainer from './GameContainer'
+import UserContainer from './UserContainer'
 import Sidebar from './Sidebar'
 // import axios from 'axios'
 
@@ -15,19 +15,41 @@ import Sidebar from './Sidebar'
 
 class App extends React.Component {
 
+    constructor() {
+        super()
+
+        this.state = {
+
+            user: []
+
+        }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 render() {
 
+
     return( 
         <div>
+            
 
-  
-        <div></div>
-        <PortfolioContainer/>
+        <PortfolioContainer user={this.state.user}/>
             <Sidebar/>
         </div>
-        
+
     )
 }}
 

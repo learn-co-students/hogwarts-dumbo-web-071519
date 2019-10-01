@@ -12,7 +12,8 @@ render(){
 
     return(
         <div className="form-group">
-<h1>Videogame Currency Calculator</h1>
+<h1 className="header-one">Videogame Currency Calculator</h1>
+< br/>
 <form> 
     <div className="form-group">
         <label> Search for a Video Game Currency: </label> <br/>

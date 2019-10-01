@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Search from './Search'
 import Calculate from './Calculate'
 import Portfolio from './Portfolio'
+import UserContainer from './UserContainer'
 
 // import axios from 'axios'
 
@@ -16,13 +17,15 @@ class PortfolioContainer extends Component {
             portfolio: [],
             search_results: [],
             search_currency: null,
-            amount: ''
+            amount: '',
+            user: []
 
         } 
         this.handleChange = this.handleChange.bind(this) 
         this.handleSelect = this.handleSelect.bind(this) 
         this.handleSubmit = this.handleSubmit.bind(this) 
         this.handleAmount = this.handleAmount.bind(this) 
+        this.handleClicko = this.handleClicko.bind(this) 
 
         
     }
@@ -37,6 +40,69 @@ class PortfolioContainer extends Component {
     
         })
         }
+
+    componentDidUpdate() {
+        fetch('http://localhost:3000/users/')
+        .then(res => res.json())
+        .then(data => {
+          this.setState({ 
+            user: data })
+        })
+        }
+
+        handleSelect(e){
+
+            e.preventDefault()
+            const id = e.target.getAttribute('data-id')
+            const activeCurrency = this.state.search_results.filter( item => item.id  == parseInt(id))
+    
+            fetch('http://localhost:3000/users/1', {
+        
+                method: 'PATCH',
+                headers: {
+                  'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                  },
+                body: JSON.stringify({
+                 name: 'test'
+                    
+                })
+              })
+              .then(res => res.json())
+              .then( (data) => {
+                 
+                    this.setState({
+                        
+                        active_currency: activeCurrency[0],
+                        search_results: []
+    
+                    })
+    
+        })}
+
+        handleClicko = () => {
+
+            const id = this.props.item.currency.id
+            //const amount = this.props.item.amount
+            
+            fetch(`http://localhost:3000/currencies/${id}`, {
+            method: 'DELETE',
+            // body:  JSON.stringify({
+            //   name: [],
+            //   amount: this.props.item.amount
+            // })
+            })
+            .then(resp => resp.json)
+            .then(data => {
+              debugger
+              this.setState({ 
+                portfolio: []
+              }
+              )
+              //add delete to the same place the state is?
+              console.log(this.state.name)})}
+
+
 
     handleChange(e) {
         fetch('http://localhost:3000/search', {
@@ -165,13 +231,17 @@ handleAmount(e){
 
     return(
         <div className="grid">
+          
              <div className="left">
         
-             
+           
            {searchOrCalculate}
            </div>
+          
            <div className="right">
-           <Portfolio portfolio={this.state.portfolio}/>
+           <UserContainer user={this.state.user} />
+           <Portfolio portfolio={this.state.portfolio} />
+      
            
         </div>
         </div>

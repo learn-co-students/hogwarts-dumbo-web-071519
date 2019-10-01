@@ -7,6 +7,14 @@
       background: url('https://i.gifer.com/7vLl.gif');
     }
 
+    .header-one{
+
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+      margin:0px;
+      color: #ffffff;
+  
+        }
+    
 
 .grid{
   
@@ -32,10 +40,11 @@
     background: url('https://i.pinimg.com/originals/5f/ee/8e/5fee8e4a9fea271529cfd8828dd990d5.gif');
   
     padding:330px;
-    border: #4d0a0a;
+   
+    border: #ffffff;
 
   padding:330px;
-  border: #4d0a0a;
+  border: #ffffff;
 
 }
 
@@ -185,15 +194,14 @@
 .flip-card {
   
   background-color: transparent;
-  width: 330px;
-  height: 330px;
-  border: 1px solid #f1f1f1;
+  width: 320px;
+  height: 300px;
+  border: 0px solid #ff0000;
  /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-  opacity: 50%;
   position: relative;
   width: 100%;
   height: 100%;
@@ -217,31 +225,31 @@
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  
-  background-color: rgba(0, 0, 0, 0.397);
+  opacity: 0.75;
+  background-color: rgba(132, 0, 255, 0.164);
+  box-shadow: 5px 2px 5px 0 rgba(185, 3, 3, 0.082) inset, -25px -25px 50px 0 rgba(47, 1, 58, 0.336) inset; 
   opacity: 50%;
-  color: black;
+  color: rgba(255, 255, 255, 0.452)55, 255, 255);
 }
 
 /* Style the back side */
-.flip-card-back {
-  background-color: rgba(0, 0, 0, 0.397);
- 
-  opacity: 50%;
+.flip-card-back { 
+  background-color: rgba(24, 8, 250, 0.144);
+  opacity: 0.95;
   color: rgb(255, 255, 255);
   transform: rotateY(180deg);
 }
 
 
 .headerr {
-  padding: 10px 16px;
-  background: #555;
-  color: #f1f1f1;
+  padding: 18px 18px;
+  background: gba(24, 8, 250, 0.144);
+  color: #ffffff;
 }
 
 /* Page content */
 .content {
-  padding: 16px;
+  padding: 1px;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
@@ -264,14 +272,14 @@ div.scrollmenu {
 
 div.scrollmenu a {
   display: inline-block;
-  color: white;
+  color: rgb(255, 5, 5);
   text-align: center;
-  padding: 14px;
+  padding: 1px;
   text-decoration: none;
 }
 
 div.scrollmenu a:hover {
-  background-color: #777;
+  background-color: rgb(116, 0, 0);
 }
 
 
@@ -280,24 +288,26 @@ body{
     padding:0;
 }
 .sidebar,.content{
-    background: #333;
-    color: #fff;
+    background: rgba(51, 51, 51, 0.171);
+    color: rgba(101, 0, 121, 0.582);
 
-    border-radius: 100px;
-    margin: 100px solid #777;
-    border:0px solid #777;
+    border-radius: 00px;
+    margin: 00px solid rgb(255, 0, 0);
+    border:0px solid rgb(255, 0, 0);
 }
 .sidebar{
-    width: 350px;
+    width: 310px;
     float: right;
 
-    border-radius: 100px solid #777;
-    margin: 100px solid #777;
-    border: -100px solid #777;
+    border-radius: 10px solid rgb(255, 0, 0);
+    margin: 10px solid rgb(128, 0, 0);
+    border: 0px solid rgb(143, 0, 0);
 
 }
 .content{
     width: 30px;
 
 }
+.test-img{
 
+}

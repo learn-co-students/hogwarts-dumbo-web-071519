@@ -7,31 +7,59 @@ class PortfolioItem extends Component {
     this.state = {
 
       name: [],
-      amount: []
+      amount: [],
+      portfolio: []
      
 }
 }
 
+// handleClicko = () => {
+
+// const id = this.props.item.currency.id
+// //const amount = this.props.item.amount
+
+// fetch(`http://localhost:3000/currencies/${id}`, {
+// method: 'PATCH',
+// // body:  JSON.stringify({
+// //   name: [],
+// //   amount: this.props.item.amount
+// // })
+// })
+// .then(resp => resp.json())
+// .then(data => {
+//   debugger
+//   this.setState({ 
+//     name: data.name
+//   }
+//   )
+//   //add delete to the same place the state is?
+//   console.log(this.state.name)})}
+
+
+
+
 handleClicko = () => {
 
-const id = this.props.item.currency.id
-const amount = this.props.item.amount
+  const id = this.props.item.currency.id
+  //const amount = this.props.item.amount
+  
+  fetch(`http://localhost:3000/currencies/${id}`, {
+  method: 'DELETE',
+  // body:  JSON.stringify({
+  //   name: [],
+  //   amount: this.props.item.amount
+  // })
+  })
+  .then(resp => resp.json)
+  .then(data => {
+    this.setState({ 
+      portfolio: []
+      //global array set state?
+    }
+    )
+    //add delete to the same place the state is?
+    console.log(this.state.name)})}
 
-fetch(`http://localhost:3000/currencies/${id}`, {
-method: 'PATCH',
-body:  JSON.stringify({
-  name: [],
-  amount: this.props.item.amount
-})
-})
-.then(resp => resp.json())
-.then(data => {
-  debugger
-  this.setState({ 
-    name: data.name
-  }
-  )
-  console.log(this.state.name)})}
 
 render()
 

@@ -20,13 +20,13 @@
 .largeHeader {
   font-size: 3.5em;
   font-weight: bold;
-  color: #3B0B0B;
+  color: rgb(255, 255, 255);
 }
 
 .smallHeader {
   font-size: 1.75em;
   font-weight: bold;
-  color: #3B0B0B;
+  color: rgb(255, 245, 245);
 }
 
 .normalText {
@@ -60,30 +60,8 @@ ul {
 
 
 
-.minBackgroundSneak {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-size: cover;
-  z-index: -3;
-}
-
-.maxBackgroundSneak {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-size: cover;
-  z-index: -3;
-  opacity: 0.75;
-}
 
 
-
-.App-logo {
-  animation: App-logo-spin infinite 5s linear;
-  height: 80px;
-  transition: all .2s ease-in-out;
-}
 
 .footer {
   padding: 1%;
