@@ -2,6 +2,7 @@ import React from 'react'
 import PortfolioContainer from './PortfolioContainer'
 import UserContainer from './UserContainer'
 import Sidebar from './Sidebar'
+// import { Example } from './example'
 // import axios from 'axios'
 
 
@@ -48,7 +49,9 @@ render() {
 
         <PortfolioContainer user={this.state.user}/>
             <Sidebar/>
+            <Route path="/example" component={Example} />
         </div>
+       
 
     )
 }}

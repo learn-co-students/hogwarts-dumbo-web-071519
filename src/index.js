@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import 'semantic-ui-css/semantic.min.css'
 import './index.css';
-import PropTypes from 'prop-types'
+
+
+
+import {BrowserRouter as Router} from 'react-router-dom';
+
 
 
 
@@ -11,7 +15,9 @@ import PropTypes from 'prop-types'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <App/>,
+    <Router>
+    <App/>
+    </Router>,
     document.body.appendChild(document.createElement('div')),
   )
 })

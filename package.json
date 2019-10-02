@@ -1,5 +1,5 @@
 {
-  "name": "hogwarts",
+  "name": "GamecurrencyFrontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,8 @@
     "cors": "^2.8.5",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
     "semantic-ui-css": "^2.2.11"
   },
   "devDependencies": {
