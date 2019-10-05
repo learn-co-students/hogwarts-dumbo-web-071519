@@ -130,31 +130,31 @@ class PortfolioContainer extends Component {
     
     })}
 
-    handleGameChange(e) {
-        fetch('http://localhost:3000/searchz', {
+    // handleGameChange(e) {
+    //     fetch('http://localhost:3000/searchz', {
     
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
+    //         method: 'POST',
+    //         headers: {
+    //           'Content-Type': 'application/json'
          
-            },
+    //         },
             
-            body: JSON.stringify({
-                search: e.target.value 
+    //         body: JSON.stringify({
+    //             search: e.target.value 
                 
-            })
-          })
-          .then(res => res.json())
-            .then( (data) => {
+    //         })
+    //       })
+    //       .then(res => res.json())
+    //         .then( (data) => {
              
-                this.setState({
+    //             this.setState({
                     
-                    game_results: [...data.games]
+    //                 game_results: [...data.games]
 
-                })
+    //             })
      
     
-    })}
+    // })}
 
 
    

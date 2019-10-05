@@ -89,7 +89,7 @@ render()
       <div className="header">Current Value:</div>
       <div className="text">${this.props.item.value}</div>
       </div>
-      <button onClick={() => { this.handleClicko(this.props.item.currency.id) }}>Delete</button>
+      {/* <button onClick={() => { this.handleClicko(this.props.item.currency.id) }}>Delete</button> */}
 
       </div>
       </div>   

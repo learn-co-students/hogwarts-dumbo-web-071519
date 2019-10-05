@@ -1,10 +1,5 @@
 import React, { Component } from 'react'
-
-//will need to build a store container which maps through all the game stores. This could be in a seperate url.
-//image will need to be an added attribute in rails
-// store has state, which will be for that independant game store
-// fetch the stores date, with name, currency, game, and location
-// enter the stores currency in the store currency container
+import Test from './Test'
 
 class Game extends Component {
 
@@ -42,7 +37,7 @@ class Game extends Component {
 
 render(){
     // const currid = this.props.game.stores[0].currency_id
-    // const gameCurr = this.props.store.map( (store, index) => <User key={index} store={store} />)
+    const gameCurr = this.props.store.map( (store, index) => <Test key={index} store={store} />)
 
 
     // const searchResults = this.props.searchResults.map( curr => <li key={curr.id} className="currency-list-item" data-id={curr.id} onClick={this.props.handleSelect}><a href="#hello" className="currency"><span>{curr.name}</span><span>{curr.currency_symbol}</span></a>  </li>)
@@ -59,9 +54,15 @@ render(){
     </div>
     <div className="flip-card-back">
     <div>
+    <br />
+    <br />
+    <br />
+    <br />
            Name: <h2>{this.props.game.name}</h2>
+           <br />
            Available Currency: <p>{this.props.game.currencies[0].name}</p>
            {/* Available Stores: <p>{gameCurr}</p> */}
+           <br />
 
  
         <div className="scrollmenu">

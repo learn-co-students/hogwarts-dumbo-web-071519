@@ -64,7 +64,7 @@ render() {
     <aside id="sidebar">
     <div className="sidebar">
         {gameItems}
-         {/* <marquee className="marq" loop="" behavior="scroll" direction="down">> {gameItems} </marquee>  */}
+
           </div>
           </aside>
   )
